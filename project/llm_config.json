@@ -1,0 +1,205 @@
+{
+  "o3-mini": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_O3_MINI",
+    "model": "@o3-mini-5791cb/o3-mini",
+    "actual_model_name": "o3-mini"
+  },
+  "4o-mini": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_4O_MINI",
+    "model": "@gpt-4o-mini-efbb71/gpt-4o-mini",
+    "actual_model_name": "gpt-4o-mini"
+  },
+  "gemini-pro": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_VERTEX_AI",
+    "model": "@vertex-ai-3e806d/gemini-2.5-pro",
+    "actual_model_name": "gemini-2.5-pro"
+  },
+    "gemini-2.0": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_VERTEX_AI",
+    "model": "@vertex-ai-3e806d/gemini-2.0-flash-exp",
+    "actual_model_name": "gemini-2.0-flash-exp"
+  },
+  "llama3.1": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_VERTEX_AI",
+    "model": "@vertex-ai-3e806d/meta.llama-3.1-405b-instruct-maas",
+    "actual_model_name": "meta.llama-3.1-405b-instruct-maas"
+  },
+  "llama3.2": {
+    "client_type": "portkey",
+    "portkey_base_url": "https://ai-gateway.apps.cloud.rt.nyu.edu",
+    "portkey_api_key_env_var": "PORTKEY_API_KEY",
+    "virtual_key_env_var": "PORTKEY_VIRTUAL_KEY_VERTEX_AI",
+    "model": "@vertex-ai-3e806d/meta.llama-3.2-90b-vision-instruct-maas",
+    "actual_model_name": "meta.llama-3.2-90b-vision-instruct-maas"
+  },
+  "qwen3": {
+    "client_type": "ollama",
+    "model": "qwen3:32b",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 2000,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+  },
+    "gpt-oss": {
+    "client_type": "ollama",
+    "model": "gpt-oss:20b",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 2000,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+  },
+  "deepseek-r1-ollama": {
+    "client_type": "ollama",
+    "model": "deepseek-r1:32b",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 2000,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+  },
+    "deepseek-r3.2": {
+    "client_type": "deepseek",
+    "model": "deepseek-reasoner",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 64000,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+  },
+  "deepseek": {
+    "client_type": "deepseek",
+    "model": "deepseek-chat",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 6400,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+},
+"gemini3-flash": {
+    "client_type": "gemini",
+    "model": "gemini-3-flash-preview",
+    "gemini_api_key": "GEMINI_API_KEY",
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 4400,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+},
+"local-qwen3-8b-vllm": {
+    "client_type": "vllm",
+    "model": "Qwen/Qwen3-8B",
+    "max_model_len": 32000,
+    "vllm_base_url": "http://127.0.0.1:8000",
+    "vllm_api_key_env_var": "VLLM_API_KEY",
+    "auto_start_server": true,
+    "fail_fast_on_empty": true,
+    "log_vllm_server_output": true,
+    "start_timeout_seconds": 600,
+    "server_args": [
+      "--max-model-len",
+      "32000",
+      "--gpu-memory-utilization",
+      "0.95"
+    ],
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 16000,
+      "max_context_tokens": 32000,
+      "thinking_retry_token_rungs": [16000, 24000, 32000],
+      "thinking_retry_max_api_retries_per_rung": 2,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+},
+"local-qwen3-4b-vllm": {
+    "client_type": "vllm",
+    "model": "Qwen/Qwen3-4B",
+    "max_model_len": 32000,
+    "vllm_base_url": "http://127.0.0.1:8001",
+    "vllm_api_key_env_var": "VLLM_API_KEY",
+    "auto_start_server": true,
+    "fail_fast_on_empty": true,
+    "log_vllm_server_output": true,
+    "start_timeout_seconds": 600,
+    "server_args": [
+      "--max-model-len",
+      "32000",
+      "--gpu-memory-utilization",
+      "0.95"
+    ],
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 16000,
+      "max_context_tokens": 32000,
+      "thinking_retry_token_rungs": [16000, 24000, 32000],
+      "thinking_retry_max_api_retries_per_rung": 2,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+},
+"local-qwen3-1.7b-vllm": {
+    "client_type": "vllm",
+    "model": "Qwen/Qwen3-1.7B",
+    "max_model_len": 32000,
+    "vllm_base_url": "http://127.0.0.1:8002",
+    "vllm_api_key_env_var": "VLLM_API_KEY",
+    "auto_start_server": true,
+    "fail_fast_on_empty": true,
+    "log_vllm_server_output": true,
+    "start_timeout_seconds": 600,
+    "server_args": [
+      "--max-model-len",
+      "32000",
+      "--gpu-memory-utilization",
+      "0.95"
+    ],
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 16000,
+      "max_context_tokens": 32000,
+      "thinking_retry_token_rungs": [16000, 24000, 32000],
+      "thinking_retry_max_api_retries_per_rung": 2,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+},
+"local-qwen3-0.6b-vllm": {
+    "client_type": "vllm",
+    "model": "Qwen/Qwen3-0.6B",
+    "max_model_len": 32000,
+    "vllm_base_url": "http://127.0.0.1:8003",
+    "vllm_api_key_env_var": "VLLM_API_KEY",
+    "auto_start_server": true,
+    "fail_fast_on_empty": true,
+    "log_vllm_server_output": true,
+    "start_timeout_seconds": 600,
+    "server_args": [
+      "--max-model-len",
+      "32000",
+      "--gpu-memory-utilization",
+      "0.95"
+    ],
+    "parameters": {
+      "temperature": 0,
+      "max_tokens": 16000,
+      "max_context_tokens": 32000,
+      "thinking_retry_token_rungs": [16000, 24000, 32000],
+      "thinking_retry_max_api_retries_per_rung": 2,
+      "system_prompt": "You are a helpful AI assistant playing video games."
+    }
+}
+}

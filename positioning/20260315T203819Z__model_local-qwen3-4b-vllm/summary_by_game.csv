@@ -1,0 +1,4 @@
+game,cases,raw_contract_rate,sanitized_contract_rate,action_parse_rate,position_parse_rate,row_match_rate,col_match_rate,exact_position_rate,had_think_rate,residual_think_rate,mean_latency_seconds,mean_input_tokens,mean_output_tokens,mean_total_tokens,total_input_tokens,total_output_tokens,total_tokens
+spatialgame1_v0,100,0.5,0.94,1.0,0.94,0.56,0.46,0.23,0.5,0.06,27.386004,683.82,2124.91,2808.73,68382,212491,280873
+spatialgame2_v0,100,0.5,0.91,1.0,0.91,0.16,0.09,0.01,0.5,0.09,42.015676,688.0,3234.24,3922.24,68800,323424,392224
+spatialgame3_v0,100,0.5,0.91,1.0,0.91,0.48,0.43,0.21,0.5,0.07,36.047861,697.0,2791.99,3488.99,69700,279199,348899

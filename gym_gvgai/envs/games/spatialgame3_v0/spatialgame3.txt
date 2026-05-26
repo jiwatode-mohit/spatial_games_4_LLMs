@@ -1,0 +1,44 @@
+BasicGame key_handler=Pulse square_size=40
+    SpriteSet
+        floor > Immovable hidden=True img=oryx/floor3
+        avatar > MovingAvatar img=oryx/rogue
+
+        key > Resource limit=1
+            redkey > img=oryx/potion3
+            bluekey > img=oryx/potion1
+
+        door > Immovable
+            reddoor > img=oryx/slime3
+            bluedoor > img=oryx/slime1
+
+        goal > Door color=GREEN img=oryx/doorclosed1
+        wall > Immovable img=oryx/wall3 autotiling=True
+
+    LevelMapping
+        A > avatar floor
+        r > redkey floor
+        b > bluekey floor
+        1 > reddoor floor
+        2 > bluedoor floor
+        g > goal floor
+        w > wall floor
+        . > floor
+
+    InteractionSet
+        avatar wall > stepBack
+
+        key avatar > collectResource scoreChange=1
+
+        reddoor avatar > killIfOtherHasMore resource=redkey limit=1 scoreChange=1
+        avatar reddoor > changeResource resource=redkey value=-1
+        
+
+        bluedoor avatar > killIfOtherHasMore resource=bluekey limit=1 scoreChange=1
+        avatar bluedoor > changeResource resource=bluekey value=-1
+
+        goal avatar > killSprite scoreChange=3
+        avatar wall door > undoAll
+    TerminationSet
+        SpriteCounter stype=goal limit=0 win=True
+        SpriteCounter stype=avatar limit=0 win=False
+        Timeout limit=6000 win=False

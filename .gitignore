@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+
+# JVM build artifacts used by GVGAI
+**/gvgai/GVGAI_Build/
+*.class
+
+# Local secrets and env files
+.env
+*.keys
+
+# Runtime outputs (keep directories, ignore generated contents)
+project/log/
+project/imgs/
+project/img_text/
+project/img_None/
+project/aliens_v0/
+llm_agent_runs_output/
+dqn_gvgai_logs/
+
+# Large generated experiment outputs
+experiments/**/runs/
+experiments/**/combined_report/
+positioning/aggregate_plots/
+positioning/*/llm_io/
+
+# Temporary/editor backups
+*~
+*.swp
+*.swo

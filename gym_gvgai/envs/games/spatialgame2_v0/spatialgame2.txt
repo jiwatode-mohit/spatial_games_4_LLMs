@@ -1,0 +1,27 @@
+BasicGame key_handler=Pulse square_size=40
+    SpriteSet
+        floor > Immovable hidden=True img=oryx/floor3
+        avatar > MovingAvatar
+            nokey > img=oryx/rogue
+            withkey > color=ORANGE img=oryx/swordmankey1
+        key > Passive img=oryx/key2
+        exit > Door color=GREEN img=oryx/doorclosed1
+        wall > Immovable img=oryx/wall3 autotiling=True
+
+    LevelMapping
+        A > nokey floor
+        k > key floor
+        e > exit floor
+        w > wall floor
+        . > floor
+
+    InteractionSet
+        avatar wall > stepBack
+        nokey key > transformTo stype=withkey scoreChange=1 killSecond=True
+        exit nokey > stepBack
+        exit withkey > killSprite scoreChange=2
+
+    TerminationSet
+        SpriteCounter stype=exit limit=0 win=True
+        SpriteCounter stype=avatar limit=0 win=False
+        Timeout limit=6000 win=False

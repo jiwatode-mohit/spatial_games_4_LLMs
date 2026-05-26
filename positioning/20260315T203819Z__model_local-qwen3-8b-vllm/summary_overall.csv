@@ -1,0 +1,2 @@
+cases,raw_contract_rate,sanitized_contract_rate,action_parse_rate,position_parse_rate,row_match_rate,col_match_rate,exact_position_rate,had_think_rate,residual_think_rate,mean_latency_seconds,mean_input_tokens,mean_output_tokens,mean_total_tokens,total_input_tokens,total_output_tokens,total_tokens
+300,0.5,0.79,1.0,0.79,0.586667,0.346667,0.306667,0.5,0.053333,49.737249,695.607,2172.14,2867.747,208682,651642,860324

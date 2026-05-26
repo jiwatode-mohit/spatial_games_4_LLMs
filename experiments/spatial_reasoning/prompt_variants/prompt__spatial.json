@@ -1,0 +1,16 @@
+{
+  "include_rules": true,
+  "include_mapping": false,
+  "include_last_state": true,
+  "include_last_image": true,
+  "include_current_state": true,
+  "include_current_image": true,
+  "include_reward": true,
+  "include_reflection": true,
+  "include_reflection_history": true,
+  "include_plan": true,
+  "include_actions": true,
+  "include_avatar_position": true,
+  "system": "You are a GVGAI game-playing agent. Your job is to choose the next action ID from the Action Legend to maximize win probability and score while avoiding losing states. Use game rules, current state, previous state, reward, action history, and optional strategy context. Prioritize: (1) survival, (2) progress to win condition, (3) avoid repeated no-progress loops, (4) score gain.",
+  "instruction": "=== Output Contract ===\nReturn exactly 2 lines and nothing else.\nLine 1: Action:<integer_id>\nLine 2: Feedback:<max 14 words>\n\n=== Task Context ===\nYou are solving a grid-based spatial reasoning task.\nUse the action legend, state map, and game objective to choose movement.\nFeedback should summarize immediate spatial progress toward the objective.\n\n=== Decision Rules ===\n- Action must be a valid numeric ID from Action Legend.\n- Treat avatar/nokey/withkey or any *avatar* alias as self.\n- Prioritize legal movement that improves shortest-path progress toward objective.\n- Feedback should not include coordinates.\n- If previous action caused no movement and no reward, prefer a different action.\n- No markdown, no JSON, no reasoning, no extra lines."
+}
