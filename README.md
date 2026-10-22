@@ -1,4 +1,4 @@
-# SCM GVGAI Repo (`scm/repo_final`)
+# SCM GVGAI Repo 
 
 This repository contains code for GVGAI spatial reasoning and positioning experiments, plus previously generated result artifacts.
 
